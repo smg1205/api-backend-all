@@ -1,0 +1,20 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: serviceCenter
+  datasource:
+    username: root
+    password: HeavyfogElysia1024
+    url: jdbc:mysql://8.130.77.37:3306/api_db?serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8088/eureka, http://localhost:8089/eureka
+  instance:
+    instance-id: service-8087
+    appname: serviceCenter
+info:
+    app:
+      name: serviceCenter

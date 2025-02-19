@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smg.mapper.UsersMapper">
+
+    <resultMap id="BaseResultMap" type="com.smg.module.entity.User">
+            <id property="uid" column="uid" jdbcType="INTEGER"/>
+            <result property="uname" column="uname" jdbcType="VARCHAR"/>
+            <result property="upassword" column="upassword" jdbcType="VARCHAR"/>
+            <result property="usk" column="usk" jdbcType="VARCHAR"/>
+            <result property="uak" column="uak" jdbcType="VARCHAR"/>
+            <result property="ctime" column="ctime" jdbcType="TIMESTAMP"/>
+            <result property="deletetime" column="deletetime" jdbcType="TIMESTAMP"/>
+            <result property="isability" column="isability" jdbcType="TINYINT"/>
+            <result property="isadmin" column="isAdmin" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        uid,uname,upassword,
+        usk,uak,ctime,
+        deletetime,isability,isAdmin
+    </sql>
+</mapper>

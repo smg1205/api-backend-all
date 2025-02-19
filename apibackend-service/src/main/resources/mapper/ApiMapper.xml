@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.smg.mapper.ApiMapper">
+
+    <resultMap id="BaseResultMap" type="com.smg.module.entity.Api">
+            <id property="apid" column="apid" jdbcType="INTEGER"/>
+            <result property="apiname" column="apiname" jdbcType="VARCHAR"/>
+            <result property="apiurl" column="apiurl" jdbcType="VARCHAR"/>
+            <result property="apinfo" column="apinfo" jdbcType="VARCHAR"/>
+            <result property="parameter" column="parameter" jdbcType="VARCHAR"/>
+            <result property="requestheader" column="requestheader" jdbcType="VARCHAR"/>
+            <result property="responseheader" column="responseheader" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="createtime" column="createtime" jdbcType="TIMESTAMP"/>
+            <result property="deletetime" column="deletetime" jdbcType="TIMESTAMP"/>
+            <result property="classify" column="classify" jdbcType="INTEGER"/>
+            <result property="method" column="method" jdbcType="VARCHAR"/>
+            <result property="times" column="times" jdbcType="INTEGER"/>
+            <result property="success" column="success" jdbcType="INTEGER"/>
+            <result property="isability" column="isability" jdbcType="TINYINT"/>
+            <result property="isdelete" column="isdelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        apid,apiname,apiurl,
+        apinfo,parameter,requestheader,
+        responseheader,price,createtime,
+        deletetime,classify,method,
+        times,success,isability,
+        isdelete
+    </sql>
+</mapper>

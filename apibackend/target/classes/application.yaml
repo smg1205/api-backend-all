@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: apiBackend
+  datasource:
+    username: root
+    password: HeavyfogElysia1024
+    url: jdbc:mysql://8.130.77.37:3306/api_db?serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8088
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false # 关闭自我保护机制，避免重启出现错误
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone:  http://localhost:8089/eureka
